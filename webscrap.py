@@ -6,10 +6,9 @@ import urllib2
 import csv
 import time
 from datetime import datetime
-
 from bs4 import BeautifulSoup
 
-#b_42 company_name, id=Bse_prc_tick
+#Company identifier: "b_42 company_name", Price Identifier "id=Bse_prc_tick or id=Nse_Prc_tick"
 
 # Specify the url. To get multiple indices modify quote_page into an list of URLs.
 quote_page = ['http://www.moneycontrol.com/india/stockpricequote/steel-tubes-pipes/aplapollotubes/BT09',
@@ -41,13 +40,15 @@ quote_page = ['http://www.moneycontrol.com/india/stockpricequote/steel-tubes-pip
               'http://www.moneycontrol.com/india/stockpricequote/infrastructure-general/vatechwabag/VTW']
 #for loop data
 data = []
-#query the url and return the html to variable 'page'. For loop which will process url one by one and store all the data in to variable data in tuples.
+"""query the url and return the html to variable 'page'.
+For loop which will process url one by one and store all the data in to variable data in tuples."""
 
 for pg in quote_page:
     page = urllib2.urlopen(pg)
 
     #parse the html using beautiful soup and store in variable 'soup'
     soup = BeautifulSoup(page, 'html.parser')
+    print soup
 
     #Take out the <div> of the name and get its value
     name_box = soup.find('h1', attrs={'class':'b_42 company_name'})
@@ -65,12 +66,12 @@ for pg in quote_page:
 
     #Save the data in tuple
     data.append((name,price))
- 
+
 ###for x in data:
 ###print data[]
 ###open a csv file with append, so old data will not be erased
 with open('index.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
-    for name,price in data:    
-        writer.writerow([name.ljust(40),price.rjust(8),datetime.now().strftime("%d%b%y")]) # %b will print month in abbriviated form e.g. Oct
+    for name,price in data:
+        writer.writerow([name.ljust(50),price.rjust(8),datetime.now().strftime("%d%b%y %H%M")]) # %b will print month in abbriviated form e.g. Oct
         #print name,price
