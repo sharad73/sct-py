@@ -1,6 +1,6 @@
 #!/usr/bin
 """This programe will find the percentage margin of safty, percentage return
-and P/BV*PE value of given stoc.
+and P/BV*PE value of given stock.
 The output will be color coded as per below:
 Margin of safty greater than 65% Green color
 Margin of safty between 50% to 65% Orange color
