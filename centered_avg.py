@@ -27,7 +27,7 @@ for number in nums:
 print sum
 """
 nums = [1,3,2,2]
-for index, number in numerate(nums[:-1])
+for index, number in numerate(nums[:-1
  
 
  
