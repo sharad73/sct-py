@@ -1,4 +1,4 @@
-#!/usr/lib/python
+##!/usr/lib/python
 
 def avg(list):
     #list = [3,7,5,2,1,6]
