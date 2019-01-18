@@ -20,3 +20,13 @@ def gcd(a,b):
     
 gcd(10,20)
          
+
+#Alternative sort version to get the Highest Common divisor of two number
+def hcd(m,n):
+    cf=[]
+    for i in range(1,min(m,n)+1): #The highest common divisor can not be more than the given lowest number
+        if (m % i) == 0 and (n % i) == 0: # check that divisor is multiple of both m and n
+            cf.append(i)
+    print ("The Highest Common Divisor of %d, %d is %d" %(m,n,cf[-1]))
+hcd(25,50)
+        
