@@ -4,5 +4,5 @@ def my_fun_with_args(name,greeting):
 
 my_fun_with_args('Sharad',"Good luck!")
 def sum_tw_numbers(a,b):
-    print a + b
+    print (a + b)
 sum_tw_numbers(4,4)

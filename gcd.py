@@ -30,3 +30,23 @@ def hcd(m,n):
     print ("The Highest Common Divisor of %d, %d is %d" %(m,n,cf[-1]))
 hcd(25,50)
         
+#Alternative sort version to get the Highest Common divisor of two number. No list method
+def hcf(m,n):
+    for i in range(1,min(m,n)+1):
+        if m % i == 0 and n % i == 0:
+            mrcf = i
+    print("Higest common factor of %d, %d is %d" %(m,n,mrcf))
+hcf(50,100)
+
+#Alternative sort version to get the Highest Common divisor of two number. Backward sort method
+def hf(x,y):
+    i = min(x,y)
+    while i > 0:
+        if x % i == 0 and y % i == 0:
+            return(i)  
+        else:
+            i = i-1
+            
+    print("Higest common factor of %d, %d is %d" %(x,y,i))
+
+hf(100,150)

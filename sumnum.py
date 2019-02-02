@@ -23,7 +23,7 @@ while k < len(num2):
                 x = num2[i]
                 y = num2[j]
                 
-                print 'In the given list %s: The sum is 8 for pair value %d, %d' %(num2,x,y)
+                print ('In the given list %s: The sum is 8 for pair value %d, %d' %(num2,x,y))
             j = j + 1
         i = i + 1
         j = i + 1

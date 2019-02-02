@@ -21,7 +21,7 @@ def round10(num):
       result += (num/10)*10
     else:
         result = (num/10)*10
-    print result
+    print (result)
 
 round10(14)
     

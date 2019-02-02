@@ -7,6 +7,4 @@ while i < len(list):
     sum = sum + list[i]
     i +=  1
 avg = sum/len(list)
-print avg
-   
-
+print ("Average of %s is %d" %(list,avg))

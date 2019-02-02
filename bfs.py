@@ -3,7 +3,7 @@
 # from s.
 from collections import defaultdict
  
-# Bredth first search
+# Breadth first search
 #This class represents a directed graph using adjacency
 # list representation
 class Graph:
@@ -35,7 +35,7 @@ class Graph:
  
             # Dequeue a vertex from queue and print it
             s = queue.pop(0)
-            print s,
+            print (s)
  
             # Get all adjacent vertices of the dequeued
             # vertex s. If a adjacent has not been visited,

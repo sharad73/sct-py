@@ -2,9 +2,9 @@
 str = 'code'
 
 if len(str) == 1:
-    print str
+    print (str)
 elif len(str) == 2:
-    print str[-1] + str[0]
+    print (str[-1] + str[0])
 else:
-  print str[-1] + str[1:-1] + str[0]
+  print (str[-1] + str[1:-1] + str[0])  #str[1:-1] will cover the case str with 3 character
  

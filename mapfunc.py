@@ -8,14 +8,14 @@ items = [1, 2, 3, 4, 5]
 squared = []
 for i in items:
     squared.append(i**2)
-print squared
+print (squared)
 
 """
 Map allows us to implement this in a much simpler and nicer way. Here you go:
 """
 items = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x**2, items))
-print squared
+print (squared)
 
 """
 Most of the times we use lambdas with map so I did the same. Instead of a list of inputs
@@ -50,4 +50,4 @@ integers.
 """
 from functools import reduce
 product = reduce((lambda x, y: x * y), [1, 2, 3, 4])
-print product
+print (product)

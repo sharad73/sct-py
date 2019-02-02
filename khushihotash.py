@@ -22,9 +22,9 @@ for i in range(1000):
 def khho(ct=0,lr=0,ctp=1,lrp=1,ac=3):
     time_spent = ct*ctp + lr*lrp + ac
     if time_spent <= 11:
-        print "Khushi"
+        print ("Khushi")
     else:
-        print "Hotash"
+        print ("Hotash")
 
     return
 
